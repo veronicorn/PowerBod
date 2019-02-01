@@ -6,9 +6,8 @@ import './Styles/App.css';
 import './Styles/Navigation.css';
 
 const App = () => (
-
   <BrowserRouter>
-    <Navigation />
+      <Navigation />
   </BrowserRouter>
 )
 

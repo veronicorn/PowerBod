@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import { Dropdown, Menu, Container, Image } from 'semantic-ui-react';
 import logo from './assets/weightlifticon.png';
+import Main from './Main';
 import Deadlifts from './LogLifts/Deadlift/Deadlifts';
 import DeadliftStats from './LogLifts/Deadlift/DeadliftStats';
 import FrontSquats from './LogLifts/FrontSquat/FrontSquats';
@@ -33,10 +34,14 @@ const Navigation = () => (
             </Container>
         </Menu>
 
+        <Switch>
+        <Route exact path='/' component={Main} />
         <Route exact path='/logmydeadlift' component={Deadlifts} />
         <Route exact path='/mydeadlifts' component={DeadliftStats} />
         <Route exact path='/logmyfrontsquat' component={FrontSquats} />
         <Route exact path='/myfrontsquats' component={FrontSquatStats} />
+        <Route component={Main} />
+        </Switch>
     </div>
 )
 
