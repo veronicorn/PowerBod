@@ -17,8 +17,8 @@ if (process.env.NODE_ENV === "production") {
 require('./routes/api-routes')(app);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PowerBodLog");
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://powerboduser:pwrbd123@ds219055.mlab.com:19055/heroku_ft39h917");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PowerBodLog");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://powerboduser:pwrbd123@ds219055.mlab.com:19055/heroku_ft39h917");
 
 // Start the API server
 app.listen(PORT, function() {
