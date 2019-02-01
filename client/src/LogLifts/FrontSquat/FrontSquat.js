@@ -1,11 +1,9 @@
 import React from 'react';
 import { Table, Header, Segment } from 'semantic-ui-react';
 
-// const date = (dateString) => new Date(dateString).toDateString();
-
-const Deadlift = (props) => (
+const FrontSquat = (props) => (
     <div className='lift-stats'>
-        <Header as='h2' attached='top'>My Deadlift Stats</Header>
+        <Header as='h2' attached='top'>My Front Squat Stats</Header>
         <Segment attached>
         <Table compact celled size='medium'>
             <Table.Header>
@@ -22,7 +20,6 @@ const Deadlift = (props) => (
                 {props.data ? props.data.reverse().map(props =>
                     <Table.Row key={props._id}>
                         <React.Fragment>
-                        {/* <Table.Cell>{date(props.date)}</Table.Cell> */}
                             <Table.Cell>{new Date(props.date).toDateString()}</Table.Cell>
                             <Table.Cell >{props.weight}</Table.Cell>
                             <Table.Cell>{props.reps}</Table.Cell>
@@ -37,4 +34,4 @@ const Deadlift = (props) => (
     </div>
 );
 
-export default Deadlift;
+export default FrontSquat;

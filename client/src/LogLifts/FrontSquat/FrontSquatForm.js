@@ -1,9 +1,9 @@
 import React from 'react';
 import { Header, Segment, Button, Form, Input } from 'semantic-ui-react';
 
-const DeadliftForm = (props) => (
+const FrontSquatForm = (props) => (
     <div className='lift-form'>
-        <Header as='h2' attached='top'>Log Deadlift</Header>
+        <Header as='h2' attached='top'>Log Front Squat</Header>
         <Segment attached>
         <Header as='h4'>{props.date}</Header>
 
@@ -50,7 +50,7 @@ const DeadliftForm = (props) => (
 
             <Button compact 
             color='yellow'
-            onClick={props.saveDeadlift}
+            onClick={props.saveFrontSquat}
             content='Save Workout' />
 
         </Form>
@@ -58,4 +58,4 @@ const DeadliftForm = (props) => (
     </div>
 )
 
-export default DeadliftForm;
+export default FrontSquatForm;
