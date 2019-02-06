@@ -17,22 +17,13 @@ a:hover {
     margin-left: 2rem;
 }
 
-.mainpage {
+.mainpage, .lift-form, .lift-stats, .guide-page {
     margin-top: 5em;
 }
 
 #logo {
     margin-right: 1.5em;
 }
-
-.lift-form {
-    margin-top: 5em;
-}
-
-.lift-stats {
-    margin-top: 5em;
-}
-
 
 @media only screen and (min-width: 600px) {
 

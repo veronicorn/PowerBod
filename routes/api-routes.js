@@ -24,6 +24,16 @@ module.exports = function (app) {
       });
   });
 
+  // app.delete('/api/deadlifts/:id', function (req, res) {
+  //   Deadlift.delete(`/api/deadlifts/`, {_id: req.params.id})
+  //     .then(function (data) {
+  //       res.json(data);
+  //     })
+  //     .catch(function (err) {
+  //       res.json(err);
+  //     });
+  // });
+
   /*FRONT SQUATS*/
   app.get('/api/frontsquats', function (req, res) {
     FrontSquat.find({})

@@ -15,6 +15,7 @@ const Deadlift = (props) => (
                     <Table.HeaderCell width={1}>Reps</Table.HeaderCell>
                     <Table.HeaderCell width={1}>Sets</Table.HeaderCell>
                     <Table.HeaderCell width={5}>Notes</Table.HeaderCell>
+                    <Table.HeaderCell width={1} textAlign='center'>Delete Entry</Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
 
@@ -28,6 +29,10 @@ const Deadlift = (props) => (
                             <Table.Cell>{props.reps}</Table.Cell>
                             <Table.Cell>{props.sets}</Table.Cell>
                             <Table.Cell>{props.notes}</Table.Cell>
+                            <Table.Cell textAlign='center'>
+                                <i className='fas fa-times' onClick={() => alert('Are you sure you want to delete this entry?')}
+                                // props.deleteEntry(props._id)}
+                                ></i></Table.Cell>
                         </React.Fragment>
                     </Table.Row>
                 ) : null}
