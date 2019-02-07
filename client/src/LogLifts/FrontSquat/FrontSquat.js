@@ -5,7 +5,7 @@ const FrontSquat = (props) => (
     <div className='lift-stats'>
         <Header as='h2' attached='top'>My Front Squat Stats</Header>
         <Segment attached>
-        <Table compact celled size='medium'>
+        <Table compact celled>
             <Table.Header>
                 <Table.Row>
                     <Table.HeaderCell width={2}>Date</Table.HeaderCell>

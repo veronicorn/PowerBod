@@ -7,7 +7,7 @@ const Deadlift = (props) => (
     <div className='lift-stats'>
         <Header as='h2' attached='top'>My Deadlift Stats</Header>
         <Segment attached>
-        <Table compact celled size='medium'>
+        <Table compact celled>
             <Table.Header>
                 <Table.Row>
                     <Table.HeaderCell width={2}>Date</Table.HeaderCell>
@@ -20,18 +20,19 @@ const Deadlift = (props) => (
             </Table.Header>
 
             <Table.Body>
-                {props.data ? props.data.reverse().map(props =>
-                    <Table.Row key={props._id}>
+                {props.data ? props.data.map(d =>
+                    <Table.Row key={d._id}>
                         <React.Fragment>
-                        {/* <Table.Cell>{date(props.date)}</Table.Cell> */}
-                            <Table.Cell>{new Date(props.date).toDateString()}</Table.Cell>
-                            <Table.Cell >{props.weight}</Table.Cell>
-                            <Table.Cell>{props.reps}</Table.Cell>
-                            <Table.Cell>{props.sets}</Table.Cell>
-                            <Table.Cell>{props.notes}</Table.Cell>
+                        {/* <Table.Cell>{date(d.date)}</Table.Cell> */}
+                            <Table.Cell>{new Date(d.date).toDateString()}</Table.Cell>
+                            <Table.Cell >{d.weight}</Table.Cell>
+                            <Table.Cell>{d.reps}</Table.Cell>
+                            <Table.Cell>{d.sets}</Table.Cell>
+                            <Table.Cell>{d.notes}</Table.Cell>
                             <Table.Cell textAlign='center'>
-                                <i className='fas fa-times' onClick={() => alert('Are you sure you want to delete this entry?')}
-                                // props.deleteEntry(props._id)}
+                                <i className='fas fa-times' onClick={() => props.handleDelete(d._id)}
+                                // alert('Are you sure you want to delete this entry?')}
+                                
                                 ></i></Table.Cell>
                         </React.Fragment>
                     </Table.Row>

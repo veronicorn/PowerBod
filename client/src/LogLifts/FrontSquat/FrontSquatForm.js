@@ -16,7 +16,8 @@ const FrontSquatForm = (props) => (
                     value={props.weightVal} 
                     onChange={props.handleChange} 
                     name='weight' 
-                    type='number' /> 
+                    type='number' 
+                    min='0' /> 
                 </Form.Field>
                 <Form.Field>
                     <Input fluid
@@ -25,7 +26,8 @@ const FrontSquatForm = (props) => (
                     value={props.repsVal} 
                     onChange={props.handleChange} 
                     name='reps' 
-                    type='number' />
+                    type='number' 
+                    min='0' />
                 </Form.Field>
                 <Form.Field>
                     <Input fluid
@@ -34,7 +36,8 @@ const FrontSquatForm = (props) => (
                     value={props.setsVal} 
                     onChange={props.handleChange} 
                     name='sets' 
-                    type='number' />
+                    type='number' 
+                    min='0' />
                 </Form.Field>
                 </Form.Group>
 
