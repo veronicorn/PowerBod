@@ -10,7 +10,16 @@ class FrontSquatStats extends React.Component {
     componentDidMount() {
         axios.get('/api/frontsquats')
             .then((results) => {
-                this.setState({ showAllFrontSquats: results.data })
+                this.setState({ showAllFrontSquats: results.data.sort((a, b) => new Date(b.date) - new Date(a.date)) 
+                });
+            });
+    };
+
+    handleDelete = (id) => {
+        axios.delete(`/api/frontsquats/${id}`)
+            .then(() => {
+                let updatedFrontSquats = this.state.showAllFrontSquats.filter(frontsquat => frontsquat._id !== id)
+                this.setState({ showAllFrontSquats: updatedFrontSquats})
             });
     };
 
@@ -18,6 +27,7 @@ class FrontSquatStats extends React.Component {
         return (
             <div>
                 <FrontSquat 
+                    handleDelete={this.handleDelete}
                     data={this.state.showAllFrontSquats} />
             </div>
         )

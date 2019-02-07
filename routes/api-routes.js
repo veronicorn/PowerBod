@@ -56,19 +56,13 @@ module.exports = function (app) {
       });
   });
 
-  // app.put('/api/deadlifts/:id', function (req, res) {
-  //   Note.findOneAndUpdate({ _id: req.body._id }, { completed: req.body.completed })
-  //     .then(function (data) {
-  //       res.json(data);
-  //     })
-  //     .catch(function (err) {
-  //       res.json(err);
-  //     });
-  // });
-
-  // app.delete('/api/notes/:id', function (req, res) {
-  //   Deadlift.findOneAndDelete(req.params.id)
-  //     .then(data => res.json({ success: true }))
-  //     .catch(err => res.json(err))
-  // })
+  app.delete('/api/frontsquats/:id', function (req, res) {
+    FrontSquat.deleteOne({ '_id': mongoose.Types.ObjectId(req.params.id) })
+      .then(function (data) {
+        res.json(data);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
 }

@@ -20,17 +20,17 @@ const Deadlift = (props) => (
             </Table.Header>
 
             <Table.Body>
-                {props.data ? props.data.map(d =>
-                    <Table.Row key={d._id}>
+                {props.data ? props.data.map(param =>
+                    <Table.Row key={param._id}>
                         <React.Fragment>
-                        {/* <Table.Cell>{date(d.date)}</Table.Cell> */}
-                            <Table.Cell>{new Date(d.date).toDateString()}</Table.Cell>
-                            <Table.Cell >{d.weight}</Table.Cell>
-                            <Table.Cell>{d.reps}</Table.Cell>
-                            <Table.Cell>{d.sets}</Table.Cell>
-                            <Table.Cell>{d.notes}</Table.Cell>
+                        {/* <Table.Cell>{date(param.date)}</Table.Cell> */}
+                            <Table.Cell>{new Date(param.date).toDateString()}</Table.Cell>
+                            <Table.Cell >{param.weight}</Table.Cell>
+                            <Table.Cell>{param.reps}</Table.Cell>
+                            <Table.Cell>{param.sets}</Table.Cell>
+                            <Table.Cell>{param.notes}</Table.Cell>
                             <Table.Cell textAlign='center'>
-                                <i className='fas fa-times' onClick={() => props.handleDelete(d._id)}
+                                <i className='fas fa-times' onClick={() => props.handleDelete(param._id)}
                                 // alert('Are you sure you want to delete this entry?')}
                                 
                                 ></i></Table.Cell>

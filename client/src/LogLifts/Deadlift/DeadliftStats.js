@@ -11,7 +11,7 @@ class DeadliftStats extends React.Component {
         axios.get('/api/deadlifts')
             .then((results) => {
                 this.setState({ showAllDeadlifts: results.data.sort((a, b) => new Date(b.date) - new Date(a.date)) 
-                })
+                });
             });
     };
 
@@ -21,7 +21,7 @@ class DeadliftStats extends React.Component {
                 let updatedDeadlifts = this.state.showAllDeadlifts.filter(deadlift => deadlift._id !== id)
                 this.setState({ showAllDeadlifts: updatedDeadlifts})
             });
-    }
+    };
 
     render() {
         return (
