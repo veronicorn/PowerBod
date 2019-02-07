@@ -17,7 +17,26 @@ a:hover {
     margin-left: 2rem;
 }
 
-.mainpage, .lift-form, .lift-stats, .guide-page {
+.main-page {
+    margin-top: 15em;
+}
+
+.main-header {
+    font-size: 4rem;
+}
+
+.main-byline {
+    padding-top: .5em;
+    color: #747474;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.highlight {
+    color: #ffb411;
+}
+
+.lift-form, .lift-stats, .guide-page {
     margin-top: 5em;
 }
 
