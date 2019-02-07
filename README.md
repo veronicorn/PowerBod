@@ -1,4 +1,5 @@
 # PowerBod
+#### By Veronica Lee
 Final project for Georgia Tech's Full Stack Web Developer Boot Camp, Cohort 11. A simple MERN stack app to log power weightlifting.
 
 ## MVP Features
