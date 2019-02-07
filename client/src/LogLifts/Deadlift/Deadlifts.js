@@ -26,7 +26,7 @@ class Deadlifts extends Component {
         event.preventDefault();
         axios.post('/api/deadlifts', this.state.newDeadlift, this.state.date)
             .then(results => {
-                console.log(results.data);
+                // console.log(results.data);
                 this.setState({ deadliftStats: [this.state.newDeadlift, this.state.date, results.data] })
             });
         this.props.history.push('/mydeadlifts');
@@ -34,17 +34,7 @@ class Deadlifts extends Component {
 
     componentDidMount() {
         this.getDate();
-    }
-  
-    // getDate = () => {
-    //     const options = {
-    //         year: 'numeric',
-    //         month: 'long',
-    //         day: 'numeric'
-    //     }                      
-    //     let date = new Date().toLocaleDateString([], options);
-    //     this.setState({ date });
-    //   };
+    };
 
     getDate = () => {
       let date = new Date().toDateString();
