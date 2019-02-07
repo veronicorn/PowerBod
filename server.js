@@ -23,7 +23,7 @@ const mongoAddress = 'mongodb://'+
   process.env.DB_USER+':'+
   process.env.DB_PASS+'@'+
   process.env.DB_HOST;
-mongoose.connect(mongoAddress);
+mongoose.connect(process.env.MONGODB_URI || mongoAddress);
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PowerBodLog");
 
 // Redirects all routes that are not declared on backend back to the right route as user refreshes the page
